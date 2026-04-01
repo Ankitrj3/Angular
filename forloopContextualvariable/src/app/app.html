@@ -1,0 +1,17 @@
+<!-- Contextual Variable Example -->
+@for(item of listValues; track item){
+  
+  <!-- @if($first){
+    <h2 style="background-color: lightgray;">{{item}}</h2>
+  }@else if($last){
+    <h2 style="background-color: lightblue;">{{item}}</h2>
+  }@else{
+    <h2>{{item}}</h2>
+  } -->
+
+  @if($odd){
+    <h2 style="background-color: rgb(118, 12, 12);">{{$index+1}} - {{item}}</h2>
+  }@else{
+    <h2 style="background-color: lightblue;">{{$index+1}} - {{item}}</h2>
+  }
+}
