@@ -1,0 +1,16 @@
+<input placeholder="Enter the text" [(ngModel)]="val"/>
+<button (click) = "onEnterDisplay()">Display</button>
+
+<br>
+{{displayName}}
+<hr>
+
+<!-- TO-DO List -->
+<input placeholder="enter the task" [(ngModel)]="task"/>
+<button (click)="addTask()" >Add Task</button>
+
+@for(item of taskList; track item.id){
+  <ul>
+    <li>{{item.id}} - {{item.name}} <button (click)="DeleteTask(item.id)">Delete</button></li>
+  </ul>
+}
