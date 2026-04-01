@@ -1,0 +1,12 @@
+<input placeholder="Enter the text"  value="{{val}}" (input) = "onInput($event)"/>
+<button (click) = "onEnterDisplay()">Display</button>
+<button (click) = "setName()">SetName</button>
+{{displayName}}
+<br>
+<hr>
+
+<!-- Template Refrence Variable -->
+<input placeholder="Enter the mailID" value="{{email}}" #EmailValue/>
+<button (click)="getEmail(EmailValue.value)">Get Email</button>
+<button (click)="setEmail()">Set Email</button>
+{{email}}
