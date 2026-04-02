@@ -14,3 +14,7 @@
     <li>{{item.id}} - {{item.name}} <button (click)="DeleteTask(item.id)">Delete</button></li>
   </ul>
 }
+
+<!-- Dynamic Style using TS -->
+<h1 [style.fontSize.px]="zoom ? big : small">Daynamic Style</h1>
+<button (click)="changeStyle()" >Change Style</button>

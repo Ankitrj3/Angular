@@ -12,6 +12,9 @@ export class App {
   protected readonly title = signal('two-WayBinding');
   val: any = "";
   displayName: any = "";
+  zoom: boolean = false;
+  big = 45;
+  small = 20;
   onEnterDisplay(){
     this.displayName = this.val;
   }
@@ -25,4 +28,8 @@ export class App {
   DeleteTask(id: number){
     this.taskList = this.taskList.filter(task => task.id !== id);
   }
+  changeStyle(){
+    this.zoom = !this.zoom;
+  }
+  
 }
