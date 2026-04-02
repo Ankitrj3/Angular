@@ -1,0 +1,13 @@
+<div *ngIf="condition; else elseBlock">
+  <ul>
+    <li *ngFor="let x of names">{{x}}</li>
+  </ul>
+</div>
+
+<ng-template #elseBlock>
+  <ol>
+  <li *ngFor="let x of details">{{x.name}} - {{x.profession}} - {{x.company}} - {{x.location}}</li>
+  </ol>
+</ng-template>
+
+<button (click)="onclick()">Toggle</button>
