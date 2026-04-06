@@ -1,2 +1,8 @@
 <h2>Home</h2>
 <p>home works!</p>
+
+<ul>
+  <li *ngFor="let u of users">
+    <a [routerLink]="['/user', u.id, u.name]">{{ u.name }}</a>
+  </li>
+</ul>
