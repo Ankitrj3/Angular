@@ -1,0 +1,12 @@
+<form method="post" action="">
+  <input type="text" name="name" placeholder="Name" [formControl]="name">
+  <br>
+  <input type="email" name="email" placeholder="Email" [formControl]="email">
+  <br>
+  <input type="password" name="password" placeholder="Password" [formControl]="password">
+  <br>
+  <button type="button" (click)="submit()">Submit</button>
+  <button type="button" (click)="AutoFill()">Auto Fill</button>
+</form>
+<a routerLink="/grouping">Go to Grouping Form</a>
+<router-outlet></router-outlet>

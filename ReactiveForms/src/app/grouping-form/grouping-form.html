@@ -1,0 +1,11 @@
+<p>grouping-form works!</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <input formControlName="firstName" placeholder="First Name">
+    <input formControlName="lastName" placeholder="Last Name">
+    <input formControlName="street" placeholder="Street">
+    <input formControlName="city" placeholder="City">
+    <input formControlName="state" placeholder="State">
+    <input formControlName="zip" placeholder="Zip Code">
+    <button type="submit" (click)="onSubmit()">Submit</button>
+</form>
