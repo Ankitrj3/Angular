@@ -1,0 +1,53 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <input formControlName="firstName" placeholder="First Name">
+    <span *ngIf="profileForm.get('firstName')?.invalid && profileForm.get('firstName')?.touched">
+      First Name is required.
+    </span>
+    <span class="error" *ngIf="profileForm.get('firstName')?.errors?.['minlength'] && profileForm.get('firstName')?.touched">
+      First Name must be at least 2 characters long.
+    </span>
+    <span class="error" *ngIf="profileForm.get('firstName')?.errors?.['maxlength'] && profileForm.get('firstName')?.touched">
+      First Name must be no more than 100 characters long.
+    </span>
+    <br><br>
+    <input formControlName="lastName" placeholder="Last Name">
+    <span class="error" *ngIf="profileForm.get('lastName')?.invalid && profileForm.get('lastName')?.touched">
+      Last Name is required.
+    </span>
+    <span class="error" *ngIf="profileForm.get('lastName')?.errors?.['minlength'] && profileForm.get('lastName')?.touched">
+      Last Name must be at least 2 characters long.
+    </span>
+    <span class="error" *ngIf="profileForm.get('lastName')?.errors?.['maxlength'] && profileForm.get('lastName')?.touched">
+      Last Name must be no more than 100 characters long.
+    </span>
+    <br><br>
+    <input formControlName="email" placeholder="Email">
+    <span class="error" *ngIf="profileForm.get('email')?.invalid && profileForm.get('email')?.touched">
+      Email is required.
+    </span>
+    <span class="error" *ngIf="profileForm.get('email')?.errors?.['pattern'] && profileForm.get('email')?.touched">
+      Please enter a valid email address.
+    </span>
+    <br><br>
+    <input formControlName="street" placeholder="Street">
+    <span class="error" *ngIf="profileForm.get('street')?.invalid && profileForm.get('street')?.touched">
+      Street is required.
+    </span>
+    <br><br>
+    <input formControlName="city" placeholder="City">
+    <span class="error" *ngIf="profileForm.get('city')?.invalid && profileForm.get('city')?.touched">
+      City is required.
+    </span>
+    <br><br>
+    <input formControlName="state" placeholder="State">
+    <span class="error" *ngIf="profileForm.get('state')?.invalid && profileForm.get('state')?.touched">
+      State is required.
+    </span>
+    <br><br>
+    <input formControlName="zip" placeholder="Zip Code">
+    <span class="error" *ngIf="profileForm.get('zip')?.invalid && profileForm.get('zip')?.touched">
+      Zip Code is required.
+    </span>
+    <br><br>
+    <button type="submit" (click)="onSubmit()">Submit</button>
+</form>
