@@ -1,0 +1,10 @@
+<h1>Data From Fake API</h1>
+
+<div *ngIf="productList?.length">
+  <div *ngFor="let item of productList">
+    <p>{{ item.id }}</p>
+    <p>{{ item.title }}</p>
+    <p>{{ item.price }}</p>
+    <hr>
+  </div>
+</div>
