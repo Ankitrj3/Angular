@@ -1,0 +1,27 @@
+<h1>Product CRUD App</h1>
+
+<!-- FORM -->
+<div>
+  <input type="text" [(ngModel)]="product.title" placeholder="Enter Title" />
+  <input type="number" [(ngModel)]="product.price" placeholder="Enter Price" />
+
+  <button (click)="saveProduct()">
+    {{ isEdit ? 'Update' : 'Add' }}
+  </button>
+
+  <button *ngIf="isEdit" (click)="resetForm()">Cancel</button>
+</div>
+
+<hr>
+
+<!-- LIST -->
+<div *ngFor="let p of productList">
+  <p>
+    <b>{{ p.title }}</b> - ₹{{ p.price }}
+  </p>
+
+  <button (click)="editProduct(p)">Edit</button>
+  <button (click)="deleteProduct(p.id)">Delete</button>
+
+  <hr>
+</div>

@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 15",
+      "price": 80000
+    },
+    {
+      "id": 2,
+      "title": "Samsung S23",
+      "price": 70000
+    },
+    {
+      "id": 1776058893685,
+      "title": "harsh",
+      "price": 2000
+    }
+  ]
+}
