@@ -1,0 +1,23 @@
+<select [(ngModel)]="Profession">
+  <option value="">Select Profession</option>
+  <option value="Developer">Developer</option>
+  <option value="Tester">Tester</option>
+  <option value="HR">HR</option>
+  <option value="Manager">Manager</option>
+  <option value="Support Engineer">Support Engineer</option>
+  <option value="DevOps Engineer">DevOps Engineer</option>
+  <option value="Intern">Intern</option>
+  <option value="Team Lead">Team Lead</option>
+</select>
+
+<div [ngSwitch]="Profession">
+  <p *ngSwitchCase="'Developer'" class="red">You are a Developer.</p>
+  <p *ngSwitchCase="'Tester'" class="black">You are a Tester.</p>
+  <p *ngSwitchCase="'HR'" class="pink">You are in HR.</p>
+  <p *ngSwitchCase="'Manager'" class="blue">You are a Manager.</p>
+  <p *ngSwitchCase="'Support Engineer'" class="green">You are a Support Engineer.</p>
+  <p *ngSwitchCase="'DevOps Engineer'" class="orange">You are a DevOps Engineer.</p>
+  <p *ngSwitchCase="'Intern'" class="gray">You are an Intern.</p>
+  <p *ngSwitchCase="'Team Lead'" class="purple">You are a Team Lead.</p>
+  <p *ngSwitchDefault class="brown">Please select a profession.</p>
+</div>
