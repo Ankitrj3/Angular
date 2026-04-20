@@ -1,0 +1,40 @@
+<button (click)="onClick()">click me</button>
+
+
+  <input type="text" placeholder="name" [(ngModel)]="name"/>
+  <input type="number" placeholder="enter age" [(ngModel)]="age"/>
+  <input type="text" placeholder="enter your address" [(ngModel)]="address"/>
+  <button (click)="onSubmit()">submit</button>
+
+{{name}}
+{{age}}
+{{address}}
+
+<ul>
+    <li *ngFor='let x of list'>{{x}}</li>
+</ul>
+
+<div *ngIf="even % 2 == 0">even {{even}}</div>
+
+{{ti}}
+
+<div [ngSwitch]="data">
+<p *ngSwitchCase="'user'">WelCome User</p>
+<p *ngSwitchCase="'admin'">WelCome Admin</p>
+<p *ngSwitchDefault>invalid</p>
+</div>
+
+
+<input type="text" placeholder="gopi" [(ngModel)]="gopi"/>
+{{gopi}}
+
+<p *ngIf="odd%2 != 0">odd</p>
+
+<router-outlet></router-outlet>
+<a routerLink="/">Home</a><br>
+<a routerLink="/contact">Contact</a><br>
+<a routerLink="/about">About</a>
+
+
+<app-home [age]="pankaj"></app-home>
+<app-contact [age]="mari"></app-contact>
