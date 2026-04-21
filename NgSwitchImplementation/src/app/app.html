@@ -1,4 +1,4 @@
-<select [(ngModel)]="Profession">
+<select [(ngModel)]="selectedProfession">
   <option value="">Select Profession</option>
   <option value="Developer">Developer</option>
   <option value="Tester">Tester</option>
@@ -10,14 +10,72 @@
   <option value="Team Lead">Team Lead</option>
 </select>
 
-<div [ngSwitch]="Profession">
-  <p *ngSwitchCase="'Developer'" class="red">You are a Developer.</p>
-  <p *ngSwitchCase="'Tester'" class="black">You are a Tester.</p>
-  <p *ngSwitchCase="'HR'" class="pink">You are in HR.</p>
-  <p *ngSwitchCase="'Manager'" class="blue">You are a Manager.</p>
-  <p *ngSwitchCase="'Support Engineer'" class="green">You are a Support Engineer.</p>
-  <p *ngSwitchCase="'DevOps Engineer'" class="orange">You are a DevOps Engineer.</p>
-  <p *ngSwitchCase="'Intern'" class="gray">You are an Intern.</p>
-  <p *ngSwitchCase="'Team Lead'" class="purple">You are a Team Lead.</p>
+<div [ngSwitch]="selectedProfession">
+
+  <div *ngSwitchCase="'Developer'" class="red">
+    <div *ngFor="let user of Profession">
+      <div *ngIf="user.Profession === 'Developer'">
+        <p>{{user.name}} | {{user.Doj}} | {{user.Salary}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Tester'" class="black">
+    <div *ngFor="let user of Profession">
+      <div *ngIf="user.Profession === 'Tester'">
+        <p>{{user.name}} | {{user.Doj}} | {{user.Salary}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'HR'" class="pink">
+    <div *ngFor="let user of Profession">
+      <div *ngIf="user.Profession === 'HR'">
+        <p>{{user.name}} | {{user.Doj}} | {{user.Salary}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Manager'" class="blue">
+    <div *ngFor="let user of Profession">
+      <div *ngIf="user.Profession === 'Manager'">
+        <p>{{user.name}} | {{user.Doj}} | {{user.Salary}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Support Engineer'" class="green">
+    <div *ngFor="let user of Profession">
+      <div *ngIf="user.Profession === 'Support Engineer'">
+        <p>{{user.name}} | {{user.Doj}} | {{user.Salary}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'DevOps Engineer'" class="orange">
+    <div *ngFor="let user of Profession">
+      <div *ngIf="user.Profession === 'DevOps Engineer'">
+        <p>{{user.name}} | {{user.Doj}} | {{user.Salary}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Intern'" class="gray">
+    <div *ngFor="let user of Profession">
+      <div *ngIf="user.Profession === 'Intern'">
+        <p>{{user.name}} | {{user.Doj}} | {{user.Salary}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'Team Lead'" class="purple">
+    <div *ngFor="let user of Profession">
+      <div *ngIf="user.Profession === 'Team Lead'">
+        <p>{{user.name}} | {{user.Doj}} | {{user.Salary}}</p>
+      </div>
+    </div>
+  </div>
+
   <p *ngSwitchDefault class="brown">Please select a profession.</p>
+
 </div>
