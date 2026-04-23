@@ -1,0 +1,28 @@
+<h2>{{ selectedId ? 'Update Passport' : 'Add Passport' }}</h2>
+
+<form [formGroup]="passportForm" (ngSubmit)="onSubmit()">
+
+  <input type="text" formControlName="holderName" placeholder="Name">
+  <input type="email" formControlName="email" placeholder="Email">
+  <input type="text" formControlName="phoneNumber" placeholder="Phone">
+  <input type="date" formControlName="expirationDate">
+
+  <button type="submit">
+    {{ selectedId ? 'Update' : 'Save' }}
+  </button>
+
+  <button type="button" (click)="resetForm()">View All User</button>
+</form>
+
+<hr>
+
+<h2>All Passports</h2>
+
+<ul>
+  <li *ngFor="let p of passports">
+    {{p.passportId}} - {{p.holderName}} - {{p.email}}
+
+    <button (click)="edit(p.passportId!)">Edit</button>
+    <button (click)="delete(p.passportId!)">Delete</button>
+  </li>
+</ul>

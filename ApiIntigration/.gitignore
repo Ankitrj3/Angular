@@ -1,0 +1,59 @@
+# .NET / C# specific
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+.vs/
+.vscode/
+*.userprefs
+*.usertasks
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# ReSharper
+.idea/
+*.sln.iml
+
+# Angular / Node.js specific
+node_modules/
+dist/
+.angular/
+coverage/
+angular.json.bak
+
+# npm
+npm-debug.log*
+npm-error.log*
+yarn-error.log*
+yarn-debug.log*
+
+# IDEs
+.vscode/
+.DS_Store
+.idea/
+*.swp
+*.swo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Build outputs
+*.dll
+*.exe
+dist/
+build/
+
+# Logs
+logs/
+*.log
