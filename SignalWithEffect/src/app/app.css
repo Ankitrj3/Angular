@@ -1,0 +1,10 @@
+.btn.btn-primary{
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+.btn.btn-secondary{
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
