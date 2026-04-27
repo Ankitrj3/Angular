@@ -1,0 +1,43 @@
+<!-- <label>Select Your Course
+</label>
+<select [(ngModel)]="selectedOption">
+  <option value="html">HTML</option>
+  <option value="c#">C#</option>
+  <option value="java">JAVA</option>
+  <option value="DOTNET">DOTNET</option>
+  <option value="SpringBoot">SpringBoot</option>
+  <option value="AWS">AWS</option>
+</select>
+{{selectedOption}} -->
+
+
+<!-- Search -->
+<!-- <input type="text" placeholder="search employee" (input)="updateSearch($event)"/>
+<ul>
+  <li *ngFor="let i of filterEmp()">
+    {{i}}
+  </li>
+</ul> -->
+
+<!-- DropDown with signal -->
+<select (click)="updateVal($event)">
+  <option value="html">HTML</option>
+  <option value="c#">C#</option>
+  <option value="java">JAVA</option>
+  <option value="DOTNET">DOTNET</option>
+  <option value="SpringBoot">SpringBoot</option>
+  <option value="AWS">AWS</option>
+</select>
+{{course()}}
+
+<button (click)="onClickIncre()">Increment</button>
+{{count()}}
+<button (click)="onClickDecre()">Decrement</button>
+{{computedCount()}}
+
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <input type="email" formControlName="email" placeholder="Email"/>
+  <input type="password" formControlName="password" placeholder="Password"/>
+  <button type="submit">Login</button>
+</form>
