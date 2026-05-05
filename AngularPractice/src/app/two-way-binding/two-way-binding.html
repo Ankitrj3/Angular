@@ -1,0 +1,22 @@
+<p>two-way-binding works!</p>
+<input type="text" [(ngModel)]="name" placeholder="Enter your name"/>
+{{name}}
+
+<form [formGroup]="studentForm" (ngSubmit)="onFormSubmit()"><br>
+<input formControlName="name" placeholder="Enter your name"/><br>
+<input formControlName="regno" placeholder="Enter your RegNo"/><br>
+<label>Choose Your Stream</label>
+<select formControlName="stream">
+    <option [value]="stream1">C#</option>
+    <option [value]="stream2">JAVA</option>
+</select><br>
+<button type="submit">Submit</button>
+</form>
+
+<ul>
+    <li *ngFor="let x of list">
+        {{x}}
+    </li>
+</ul>
+
+<p *ngIf="value%2==0">{{value}}</p>

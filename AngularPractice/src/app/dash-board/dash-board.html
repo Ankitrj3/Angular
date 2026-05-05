@@ -1,0 +1,30 @@
+<p>dash-board works!</p>
+
+<label>Select Your Course</label>
+<br>
+<select [(ngModel)]="SelectedModel">
+    <option value="C#">C#</option>
+    <option value="Java">Java</option>
+    <option value="C++">C++</option>
+    <option value="Dotnet">Dotnet</option>
+</select>
+<br>
+<br>
+{{SelectedModel}}
+
+<form [formGroup]="StudentForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="Name"/>
+    <input type="email" formControlName="section" placeholder="Section"/>
+    <input type="text" formControlName="rollno" placeholder="Roll No"/>
+    <button type="submit">Submit</button>
+</form>
+
+{{StudentForm.value.name}}
+{{StudentForm.value.section}}
+{{StudentForm.value.rollno}}
+
+<br>
+<!-- <app-child [childVar]="Value"></app-child> -->
+
+<input [(ngModel)]="Value">
+<app-child [childVar]="Value"></app-child>

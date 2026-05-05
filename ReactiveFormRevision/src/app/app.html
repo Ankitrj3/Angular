@@ -1,0 +1,11 @@
+<form [formGroup]="UniversityForm" (ngSubmit)="onSubmit()">
+<input formControlName="name" placeholder="Enter your name"/>
+<input formControlName="age" placeholder="Enter your age"/>
+<input formControlName="Reg" placeholder="Enter reg"/>
+<button type="submit">Submit</button>
+</form>
+
+<input type="text" [(ngModel)]="search" (input)="onFilterData()"/>
+<ul>
+    <li *ngFor="let i of filterData">{{i}}</li>
+</ul>
